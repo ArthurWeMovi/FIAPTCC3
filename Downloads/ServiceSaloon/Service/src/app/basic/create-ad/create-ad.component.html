@@ -1,0 +1,56 @@
+<div style="background-color: #f8f8f8;">
+<div class="parent">
+    <div class="child">
+        <div nz-row class="imgDiv">
+            <h2 style="margin-left: 230px">Criar anuncio</h2>
+        </div>
+
+        <form nz-form[formGroup]="validateForm" (ngSubmit)="postAd()">
+            <div nz-row>
+                <div nz-col [nzMd]="24" [nzSm]="24" [nzXs]="24">
+
+                    <div class="profile-badge">
+                        <label for="upload_profile_image" class="upload-label" ngIf="selectedFile">
+                            <img class="profile" [src]="imagePreview" alt="profile"/>
+                            </label>
+                            <input type="file" nz-buttom nzType="primary" accept="image/x-png,image/gif, image/jpeg"
+                            (change)="onFileSelected($event)"/>
+                            <button nz-Button nzShape="circle"></button>
+                        </label>
+                    </div>
+                </div>
+
+                <div nz-col nzSpan="24" style="margin-top: 20px">
+                    <nz-form-item>
+                        <nz-form-control nzHasFeedback [nzXs]="24" nzErrorTip="Esse dado e necessario">
+                            <input nz-input placeholder="Service Name" formControlName="serviceName" />
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
+
+                <div nz-col nzSpan="24">
+                    <nz-form-item>
+                        <nz-form-control nzHasFeedback [nzXs]="24" nzErrorTip="Esse dado e necessario">
+                            <input nz-input placeholder="Price" formControlName="number" />
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
+
+                <div nz-col nzSpan="24">
+                    <nz-form-item>
+                        <nz-form-control nzHasFeedback [nzXs]="24" nzErrorTip="Esse dado e necessario">
+                            <textarea nz-input placeholder="Description" formControlName="description"></textarea>
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
+            </div>
+
+            <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">
+                Adicionar
+            </button>
+        </form>
+    </div>
+</div>
+
+
+    </div>

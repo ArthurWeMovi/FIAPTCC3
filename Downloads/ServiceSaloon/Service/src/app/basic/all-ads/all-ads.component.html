@@ -1,0 +1,27 @@
+<div class="bg">
+    <div style="margin-top:10px;" class="child" ngfor="let ad of ads">
+        <div nz-row>
+            <div nz-col nzSpan="8">
+                <img class="profile" [src]="updateImg(ad.returnedImg)" style="height: 130px; width: 200px; border-radius: 10px;"/>
+            </div>
+            <div nz-col nzSpan="16">
+                <h2 style="cursor: pointer; color: #108ee9;">
+                    {{ad.serviceName}}
+                </h2>
+                <hr>
+                <h5>
+                    Preco: <b>{{ad.price}}</b>
+                </h5>
+                <h5>
+                    Descricao: <b>{{ad.price}}</b>
+                </h5>
+                <hr>
+                <div style="float: right;">
+                    <button nzSize="small" nz-button nzType="primary" routerLink="/company/ad/{{ad.id}}"> Update </button>
+                    <button (click)="deleteAd()" nzSize="margin-left: 10px" nz-button nzType="small" routerLink="primary"> Delete </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
